@@ -1,3 +1,3 @@
 ﻿<Project>
-  <Import Project="../buildMultiTargeting/ToDoWebAppList.props" />
+  <Import Project="..\buildMultiTargeting\ToDoWebAppList.props" />
 </Project>

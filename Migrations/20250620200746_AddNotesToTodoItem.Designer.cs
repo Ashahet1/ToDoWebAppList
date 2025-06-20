@@ -10,8 +10,8 @@ using ToDoWebAppList.Data;
 namespace ToDoWebAppList.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250620033238_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20250620200746_AddNotesToTodoItem")]
+    partial class AddNotesToTodoItem
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -28,7 +28,11 @@ namespace ToDoWebAppList.Migrations
                     b.Property<bool>("IsComplete")
                         .HasColumnType("INTEGER");
 
+                    b.Property<string>("Notes")
+                        .HasColumnType("TEXT");
+
                     b.Property<string>("Title")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.HasKey("ToDoId");

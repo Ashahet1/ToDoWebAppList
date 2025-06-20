@@ -25,7 +25,11 @@ namespace ToDoWebAppList.Migrations
                     b.Property<bool>("IsComplete")
                         .HasColumnType("INTEGER");
 
+                    b.Property<string>("Notes")
+                        .HasColumnType("TEXT");
+
                     b.Property<string>("Title")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.HasKey("ToDoId");
