@@ -1,0 +1,21 @@
+﻿@model IEnumerable<ToDoWebAppList.Models.TodoItem>
+
+<h1>My Todo List</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Task</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Title</td>
+                <td>@(item.IsComplete ? "Completed" : "Not completed")</td>
+            </tr>
+        }
+    </tbody>
+</table>
